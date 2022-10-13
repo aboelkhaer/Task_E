@@ -32,7 +32,6 @@ class CartScreen extends GetView<CartController> {
                       controller.cartItems.length,
                       (index) => CartItem(
                         cartModel: controller.cartItems[index],
-                        cartIndex: index,
                       ),
                     ),
                   ],

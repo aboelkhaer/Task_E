@@ -5,8 +5,7 @@ import 'package:task_e/model/cart_model.dart';
 
 class CartItem extends GetView<CartController> {
   CartModel cartModel;
-  int? cartIndex;
-  CartItem({super.key, required this.cartModel, required int cartIndex});
+  CartItem({super.key, required this.cartModel});
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +44,11 @@ class CartItem extends GetView<CartController> {
                 Icons.remove,
               ),
             ),
-            Text(cartModel.quantity.toString()),
+            Obx(
+              () => Text(controller.cartCounter.toString()),
+            ),
             IconButton(
-              onPressed: () => controller.addItem(cartIndex!),
+              onPressed: () => controller.addItem(),
               icon: Icon(
                 Icons.add,
               ),

@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:task_e/model/cart_model.dart';
 
 class CartController extends GetxController {
-  List<CartModel> cartItems = [];
+  RxList cartItems = [].obs;
   RxInt cartCounter = 0.obs;
 
   @override
@@ -19,11 +19,10 @@ class CartController extends GetxController {
     final String response = await rootBundle.loadString('assets/cart.json');
     List data = json.decode(response)['cart'];
     cartItems.addAll(data.map((e) => CartModel.fromJson(e)).toList());
-    update();
   }
 
-  addItem(int index) {
-    cartItems[index].quantity++;
+  addItem() {
+    cartCounter++;
   }
 
   removeItem() {
