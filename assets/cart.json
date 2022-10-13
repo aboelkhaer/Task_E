@@ -1,0 +1,31 @@
+{
+    "cart": [
+        {
+            "id": "c1",
+            "productId": "Item1",
+            "productName": "Item Name",
+            "initialPrice": 15,
+            "productPrice": 10,
+            "color": "red",
+            "quantity": 1
+        },
+        {
+            "id": "c2",
+            "productId": "Item2",
+            "productName": "Item Name",
+            "initialPrice": 14,
+            "productPrice": 19,
+            "color": "green",
+            "quantity": 1
+        },
+        {
+            "id": "c3",
+            "productId": "Item3",
+            "productName": "Item Name",
+            "initialPrice": 12,
+            "productPrice": 14,
+            "color": "yellow",
+            "quantity": 1
+        }
+    ]
+}
